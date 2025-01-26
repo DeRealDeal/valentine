@@ -1,0 +1,24 @@
+<div
+  class="d-flex flex-column justify-content-center align-items-center h-100 gap-5"
+>
+  <div>
+    <h1>Quieres ser mi Valentín?</h1>
+  </div>
+  <img [ngSrc]="imageSrc" height="300" width="300" />
+  <div class="d-flex gap-3 justify-content-start">
+    <button class="btn btn-success">Si</button>
+    <div>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div id="changing">
+      <button
+        class="btn btn-danger"
+        #changing
+        (click)="change(changing)"
+        id="changing"
+      >
+        No
+      </button>
+    </div>
+  </div>
+</div>
