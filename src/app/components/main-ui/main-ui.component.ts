@@ -1,5 +1,6 @@
 import { NgOptimizedImage } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-ui',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './main-ui.component.scss',
 })
 export class MainUiComponent implements OnInit {
+  constructor(readonly router: Router) {}
   imageUrls = [
     'assets/images/question.png',
     'assets/images/sad.png',
@@ -46,5 +48,9 @@ export class MainUiComponent implements OnInit {
       Math.floor(Math.random() * window.innerHeight) - window.innerHeight / 2;
     b.style.left = x - 60 + 'px';
     b.style.top = y - 150 + 'px';
+  }
+
+  yes() {
+    this.router.navigate(['yes']);
   }
 }
